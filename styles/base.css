@@ -1,0 +1,267 @@
+/* -------------------- COLOR SCHEME ------------------------
+primary color: #4F5B2A
+secondary color: #B8892D
+accent color: #D8C9A8
+text color: #4c4541
+background color: #f5efe3
+*/
+
+/* -------------------- SITE WIDE ------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* -------------------- HEADER ------------------------*/
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 10px 0 5px 10px;
+  align-items: end;
+  border-bottom: solid 1px #d8c9a8;
+  column-gap: 8px;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2px;
+}
+
+header span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4c4541;
+}
+
+/* -------------------- HAMBURGER ------------------------*/
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #4f5b2a;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/* -------------------- NAVIGATION ------------------------*/
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.8rem 10px;
+  color: #4c4541;
+  text-decoration: none;
+  border-bottom: solid 1px #d8c9a8;
+}
+
+.navigation li.current {
+  background-color: #eee;
+}
+
+.navigation a:hover {
+  background-color: #4f5b2a;
+  color: #f5efe3;
+}
+
+h1 {
+  margin: 1rem 10px;
+}
+
+/* -------------------- MAIN ------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+main h1 {
+  width: 90%;
+  grid-column: 1 / -1;
+  color: #4c4541;
+}
+
+main h2 {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #d8c9a8;
+  color: #4c4541;
+}
+
+.card {
+  background-color: #f5efe3;
+  border: 1px solid #d8c9a8;
+}
+
+.card p {
+  word-spacing: 4px;
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: large;
+  padding: 8rem;
+  color: #4c4541;
+}
+
+.student-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.card img {
+  display: block;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 5px 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.cert-courses {
+  width: 100%;
+  grid-column: 1 / -1;
+  text-align: center;
+  background-color: #f5efe3;
+  border: 1px solid #d8c9a8;
+}
+
+.filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 35px 0;
+}
+
+.filter-btns button {
+  padding: 15px 20px;
+  border: 1.5px solid #4c4541;
+  border-radius: 5px;
+  background-color: #4f5b2a;
+  color: #f5efe3;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-btns button:hover,
+.filter-btns button.active {
+  background-color: #b8892d;
+  color: #f5efe3;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-card {
+  border: 1px solid #d8c9a8;
+  background-color: #4f5b2a;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex: 1 1 220px;
+  max-width: 220px;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.course-card h3 {
+  color: #f5efe3;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #f5efe3;
+}
+
+.course-card.completed {
+  background-color: #b8892d;
+  border: 1px solid #d8c9a8;
+}
+
+.course-card.completed p,
+h3 {
+  color: #f5efe3;
+}
+
+.credits {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #4c4541;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px dashed #4f5b2a;
+  border-bottom: 1px solid #4c4541;
+  font-size: 1rem;
+}
+
+/* -------------------- FOOTER ------------------------*/
+footer {
+  background-color: #d8c9a8;
+  padding: 1rem 10px;
+  text-align: center;
+}
+
+footer p {
+  font-weight: 500;
+  padding-top: 5px;
+  color: #4c4541;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: #b8892d solid 1px;
+  border-radius: 22px;
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+}
+
+.social a:hover {
+  background-color: #f5efe3;
+}

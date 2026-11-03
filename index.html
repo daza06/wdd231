@@ -3,9 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Course Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/date.js" defer></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <header>
+      <img src="images/house.svg" alt="Site Logo" width="16" height="16" />
+      <span>Daniel Zavala | WDD231</span>
+      <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Home</h1>
+      <section class="card">
+        <h2>About Me</h2>
+        <p>
+          Hi! My name is Daniel Zavala and I live in Utah. I'm currently working
+          towards a degree in Software Development from BYU-I. I love technology
+          and working with computers. In my free time I enjoy playing video
+          games, watching movies, and going on walks with our dog. I'm an
+          excellent problem solver and very patient, you can count on me to get
+          the job done right!
+        </p>
+      </section>
+      <section class="card">
+        <h2>Student Photo</h2>
+        <div class="student-photo">
+          <img src="images/profile-pic.jpg" alt="Profile Picture" />
+        </div>
+      </section>
+      <section id="courses" class="cert-courses">
+        <h2>Web Certificate Courses</h2>
+        <div class="filter-btns">
+          <button id="filter-all">All</button>
+          <button id="filter-cse">CSE</button>
+          <button id="filter-wdd">WDD</button>
+        </div>
+        <div id="course-container" class="card-grid"></div>
+        <p class="credits">
+          The total credits listed above is <span id="total-credits">0</span>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div class="social">
+        <a href="" target="_blank"
+          ><img
+            src="images/linkedin.svg"
+            alt="Linkedin Profile"
+            width="16"
+            height="16"
+        /></a>
+        <a href="" target="_blank"
+          ><img
+            src="images/github.svg"
+            alt="Github Profile"
+            width="16"
+            height="16"
+        /></a>
+        <a href="" target="_blank"
+          ><img
+            src="images/discord.svg"
+            alt="Discord Profile"
+            width="16"
+            height="16"
+        /></a>
+        <a href="" target="_blank"
+          ><img
+            src="images/instagram.svg"
+            alt="Instagram Profile"
+            width="16"
+            height="16"
+        /></a>
+      </div>
+      <p>&copy; <span id="currentyear"></span> | Daniel Zavala | Utah</p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
